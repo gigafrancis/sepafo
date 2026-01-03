@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Archives photos - Sépafo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-title-container">
+    <img src="images/logo.png" alt="Logo de la troupe Sépafo" class="header-logo">
+    <h1>Archives photos</h1>
+  </div>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="troupe.html">La troupe</a>
+    <a href="spectacles.html">Spectacles</a>
+    <a href="reservation.html">Réservation</a>
+    <a href="photos.html" class="active">Archives photos</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+</header>
+<main>
+
+  <h2>Galerie Photos</h2>
+
+  <!-- ===== SECTION PHOTOS ===== -->
+  <section class="gallery-section">
+    <h3>Photos</h3>
+
+    <div class="gallery-grid">
+
+      <!-- Images 1 à 12 -->
+      <figure>
+        <img src="images/1.jpg" alt="Photo 1 - Troupe Sépafo">
+      </figure>
+
+      <figure>
+        <img src="images/2.jpg" alt="Photo 2 - Troupe Sépafo">
+      </figure>
+
+      <figure>
+        <img src="images/3.jpg" alt="Photo 3 - Troupe Sépafo">
+      </figure>
+
+      <figure>
+        <img src="images/4.jpg" alt="Photo 4 - Troupe Sépafo">
+      </figure>
+
+      <figure>
+        <img src="images/5.jpg" alt="Photo 5 - Troupe Sépafo">
+      </figure>
+
+      <figure>
+        <img src="images/6.jpg" alt="Photo 6 - Troupe Sépafo">
+      </figure>
+
+      <figure>
+        <img src="images/7.jpg" alt="Photo 7 - Troupe Sépafo">
+      </figure>
+
+      <figure>
+        <img src="images/8.jpg" alt="Photo 8 - Troupe Sépafo">
+      </figure>
+
+      <figure>
+        <img src="images/9.jpg" alt="Photo 9 - Troupe Sépafo">
+      </figure>
+
+      <figure>
+        <img src="images/10.jpg" alt="Photo 10 - Troupe Sépafo">
+      </figure>
+
+      <figure>
+        <img src="images/11.jpg" alt="Photo 11 - Troupe Sépafo">
+      </figure>
+
+    </div>
+    <p>Vous pouvez retrouver plus de photos sur notre <a href="https://www.facebook.com/troupe.sepafo">Facebook</a></p>
+  </section>
+
+
+  <!-- ===== SECTION ARTICLES PRESSE ===== -->
+  <section class="gallery-section press-gallery">
+  <h3>Articles de presse</h3>
+
+  <div class="gallery-grid">
+    <figure>
+      <img class="zoomable" src="images/article1.jpeg" alt="Article de presse 1 - Troupe Sépafo">
+    </figure>
+
+    <figure>
+      <img class="zoomable" src="images/article2.jpeg" alt="Article de presse 2 - Troupe Sépafo">
+    </figure>
+
+  </div>
+</section>
+
+
+
+</main>
+
+<footer>
+  <p>© Troupe Sépafo — Angers </p>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <img id="lightbox-img">
+</div>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+document.querySelectorAll(".zoomable").forEach(img => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.style.display = "none";
+});
+</script>
+
+</body>
+</html>
