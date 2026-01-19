@@ -359,3 +359,8 @@ p {
   max-height: 95%;
   border-radius: 8px;
 }
+
+.note-salle {
+  font-size: 0.85em;
+  color: #666;
+}
