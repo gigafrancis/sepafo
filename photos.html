@@ -2,11 +2,22 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Archives photos - Sépafo</title>
+  <title>Sépafo — Photos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Galerie photos et articles de presse de la troupe de théâtre amateur Sépafo, à Angers.">
+
+  <meta property="og:site_name" content="Sépafo">
+  <meta property="og:title" content="Sépafo — Photos">
+  <meta property="og:description" content="Galerie photos et articles de presse de la troupe de théâtre amateur Sépafo, à Angers.">
+  <meta property="og:image" content="https://www.sepafo.fr/images/logo.png">
+  <meta property="og:url" content="https://www.sepafo.fr/photos.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="canonical" href="https://www.sepafo.fr/">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="canonical" href="https://www.sepafo.fr/photos.html">
 </head>
 <body>
 
@@ -37,47 +48,47 @@
 
       <!-- Images 1 à 12 -->
       <figure>
-        <img src="images/1.jpg" alt="Photo 1 - Troupe Sépafo">
+        <img class="zoomable" src="images/1.jpg" alt="Photo 1 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
       <figure>
-        <img src="images/2.jpg" alt="Photo 2 - Troupe Sépafo">
+        <img class="zoomable" src="images/2.jpg" alt="Photo 2 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
       <figure>
-        <img src="images/3.jpg" alt="Photo 3 - Troupe Sépafo">
+        <img class="zoomable" src="images/3.jpg" alt="Photo 3 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
       <figure>
-        <img src="images/4.jpg" alt="Photo 4 - Troupe Sépafo">
+        <img class="zoomable" src="images/4.jpg" alt="Photo 4 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
       <figure>
-        <img src="images/5.jpg" alt="Photo 5 - Troupe Sépafo">
+        <img class="zoomable" src="images/5.jpg" alt="Photo 5 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
       <figure>
-        <img src="images/6.jpg" alt="Photo 6 - Troupe Sépafo">
+        <img class="zoomable" src="images/6.jpg" alt="Photo 6 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
       <figure>
-        <img src="images/7.jpg" alt="Photo 7 - Troupe Sépafo">
+        <img class="zoomable" src="images/7.jpg" alt="Photo 7 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
       <figure>
-        <img src="images/8.jpg" alt="Photo 8 - Troupe Sépafo">
+        <img class="zoomable" src="images/8.jpg" alt="Photo 8 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
       <figure>
-        <img src="images/9.jpg" alt="Photo 9 - Troupe Sépafo">
+        <img class="zoomable" src="images/9.jpg" alt="Photo 9 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
       <figure>
-        <img src="images/10.jpg" alt="Photo 10 - Troupe Sépafo">
+        <img class="zoomable" src="images/10.jpg" alt="Photo 10 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
       <figure>
-        <img src="images/11.jpg" alt="Photo 11 - Troupe Sépafo">
+        <img class="zoomable" src="images/11.jpg" alt="Photo 11 - Troupe Sépafo" loading="lazy" decoding="async">
       </figure>
 
     </div>
@@ -91,11 +102,11 @@
 
   <div class="gallery-grid">
     <figure>
-      <img class="zoomable" src="images/article1.jpeg" alt="Article de presse 1 - Troupe Sépafo">
+      <img class="zoomable" src="images/article1.jpeg" alt="Article de presse 1 - Troupe Sépafo" loading="lazy" decoding="async">
     </figure>
 
     <figure>
-      <img class="zoomable" src="images/article2.jpeg" alt="Article de presse 2 - Troupe Sépafo">
+      <img class="zoomable" src="images/article2.jpeg" alt="Article de presse 2 - Troupe Sépafo" loading="lazy" decoding="async">
     </figure>
 
   </div>
@@ -110,23 +121,43 @@
 </footer>
 
 <!-- Lightbox -->
-<div id="lightbox">
-  <img id="lightbox-img">
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie">
+  <img id="lightbox-img" alt="">
 </div>
 
 <script>
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 
+const ouvrirLightbox = (img) => {
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightbox.style.display = "flex";
+};
+
+const fermerLightbox = () => {
+  lightbox.style.display = "none";
+  lightboxImg.removeAttribute("src");
+};
+
 document.querySelectorAll(".zoomable").forEach(img => {
-  img.addEventListener("click", () => {
-    lightboxImg.src = img.src;
-    lightbox.style.display = "flex";
+  img.setAttribute("role", "button");
+  img.setAttribute("tabindex", "0");
+  img.addEventListener("click", () => ouvrirLightbox(img));
+  img.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      ouvrirLightbox(img);
+    }
   });
 });
 
-lightbox.addEventListener("click", () => {
-  lightbox.style.display = "none";
+lightbox.addEventListener("click", fermerLightbox);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    fermerLightbox();
+  }
 });
 </script>
 

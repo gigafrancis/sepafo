@@ -163,7 +163,7 @@ h2 {
   margin-top: 0;
 }
 
-.current-season, .past-shows {
+.current-season, .next-season, .past-shows {
   margin: 2rem 0;
   padding: 1rem;
   border-radius: 12px;
@@ -287,10 +287,42 @@ footer {
   color: #555;
 }
 
-.card:hover {
+/* Effet de survol seulement sur les cartes cliquables (balise <a>) */
+a.card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   background-color: #e6f0fb;
+}
+
+/* Carte d'une date dont la billetterie n'est pas encore ouverte */
+.card--bientot {
+  border: 1px dashed #c9c9c9;
+}
+
+.card-note {
+  margin-top: 0.6rem !important;
+  font-size: 0.85rem !important;
+  font-style: italic;
+  color: #666 !important;
+}
+
+/* Bloc "dernière chance" en tête de la page Réservation */
+.derniere-chance {
+  background: #fff2e6;
+  border-left: 5px solid #c43243;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.derniere-chance h2 {
+  margin-top: 0;
+}
+
+.info-billetterie {
+  background: #f6f6f6;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
 }
 
 .fb-page {
@@ -342,6 +374,19 @@ p {
 
 .gallery-grid img:hover {
   transform: scale(1.05);
+}
+
+.zoomable {
+  cursor: zoom-in;
+}
+
+.zoomable:focus-visible,
+.show[data-photos]:focus-visible,
+nav a:focus-visible,
+.card:focus-visible,
+button:focus-visible {
+  outline: 3px solid #e10404;
+  outline-offset: 3px;
 }
 
 #lightbox {

@@ -2,47 +2,31 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Spectacles — Sépafo</title>
+  <title>Sépafo — Spectacles</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Le spectacle de la saison en cours et toutes les pièces jouées par la troupe Sépafo depuis 2016.">
+
+  <meta property="og:site_name" content="Sépafo">
+  <meta property="og:title" content="Sépafo — Spectacles">
+  <meta property="og:description" content="Le spectacle de la saison en cours et toutes les pièces jouées par la troupe Sépafo depuis 2016.">
+  <meta property="og:image" content="https://www.sepafo.fr/images/logo.png">
+  <meta property="og:url" content="https://www.sepafo.fr/spectacles.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="canonical" href="https://www.sepafo.fr/">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="canonical" href="https://www.sepafo.fr/spectacles.html">
   <style>
-    /* ======= Styles du popup ======= */
-    .modal {
-      display: none; 
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.8);
-    }
-    .modal-content {
-      margin: 5% auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 800px;
-      text-align: center;
-    }
-    .modal-content img {
-      max-width: 100%;
-      margin: 10px 0;
-      border-radius: 8px;
-    }
-    .close {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      color: #fff;
-      font-size: 30px;
-      font-weight: bold;
+    /* Les styles du popup sont dans css/style.css ; ici, seulement
+       ce qui est propre à cette page. */
+    .show[data-photos] {
       cursor: pointer;
     }
-    .past-shows .show {
-      cursor: pointer;
+    .show[data-photos]:focus-visible {
+      outline: 3px solid #e10404;
+      outline-offset: 3px;
     }
   </style>
 </head>
@@ -74,7 +58,7 @@
     <h2>Saison actuelle</h2>
 
     <article class="show">
-      <img src="images/affichepostit.jpg" alt="Affiche du spectacle Post-it">
+      <img src="images/affichepostit.jpg" alt="Affiche du spectacle Post-it" loading="lazy" decoding="async">
       <div>
         <h3>Post-it
         <span class="season-inline">Saison 2025–2026</span></h3>
@@ -82,6 +66,24 @@
         <p>Trois amies, des amours compliqués, des fous rires, des coups de blues collés sur des post-it... Une comédie vive, tendre, drôle et impertinente sur l'amitié, les hommes et la vie au féminin. Un rendez-vous à ne pas manquer !</p>
         <p>À partir de 10 ans</p>
         <p><strong>Saison en cours</strong> - Angers et environs</p>
+        <p>Dernière représentation : <strong>samedi 3 octobre 2026 à 20h30</strong>, à l'Espace aux trois jardins, salle Charlie Chaplin — Bourgneuf-en-Mauges. Tarif 8 €, gratuit pour les moins de 12 ans. Réservation auprès de Rachel au <a href="tel:+33652001870">06 52 00 18 70</a>.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ========================= -->
+  <!-- PROCHAINE SAISON -->
+  <!-- ========================= -->
+  <section class="next-season">
+    <h2>Prochaine saison</h2>
+
+    <article class="show">
+      <img src="images/affichelaguerredeshachoirs.jpg" alt="Affiche du spectacle La guerre des hachoirs" loading="lazy" decoding="async">
+      <div>
+        <h3>La guerre des hachoirs
+        <span class="season-inline">Saison 2026–2027</span></h3>
+        <i>Une comédie de Julien Orain</i>
+        <p>Retrouvez toutes les dates sur la page <a href="reservation.html">Réservation</a>.</p>
       </div>
     </article>
   </section>
@@ -94,7 +96,7 @@
     <p style="font-style: italic; color: #888; margin-top: -0.5em; margin-bottom: 1em; font-size: 0.9rem;">Cliquez sur une affiche pour voir les photos du spectacle.</p>
 
     <article class="show" data-photos="images/cetaitmieuxavant1.jpg,images/cetaitmieuxavant2.jpg,images/cetaitmieuxavant3.jpg,images/cetaitmieuxavant4.jpg,images/cetaitmieuxavant5.jpg,images/cetaitmieuxavant6.jpg,images/cetaitmieuxavant7.jpg,images/cetaitmieuxavant8.jpg,images/cetaitmieuxavant9.jpg">
-      <img src="images/affichecetaitmieuxavant.jpg" alt="Affiche du spectacle C'était mieux avant">
+      <img src="images/affichecetaitmieuxavant.jpg" alt="Affiche du spectacle C'était mieux avant" loading="lazy" decoding="async">
       <div>
         <h3>C’était mieux avant !
         <span class="season-inline">Saison 2024–2025</span></h3>
@@ -105,7 +107,7 @@
     </article>
 
     <article class="show" data-photos="images/musee1.jpg,images/musee2.jpg,images/musee3.jpg,images/musee4.jpg,images/musee5.jpg,images/musee6.jpg,images/musee7.jpg,images/musee8.jpg">
-      <img src="images/affichemuseehautmuseebas.jpg" alt="Affiche du spectacle Musée haut musée bas">
+      <img src="images/affichemuseehautmuseebas.jpg" alt="Affiche du spectacle Musée haut musée bas" loading="lazy" decoding="async">
       <div>
         <h3>Musée haut, musée bas
         <span class="season-inline">Saison 2023–2024</span></h3>
@@ -116,7 +118,7 @@
     </article>
 
     <article class="show" data-photos="images/coupdetheatre1.jpg,images/coupdetheatre2.jpg,images/coupdetheatre3.jpg,images/coupdetheatre4.jpg,images/coupdetheatre5.jpg,images/coupdetheatre6.jpg,images/coupdetheatre7.jpg,images/coupdetheatre8.jpg,images/coupdetheatre9.jpg,images/coupdetheatre10.jpg,images/coupdetheatre11.jpg,images/coupdetheatre12.jpg,images/coupdetheatre13.jpg">
-      <img src="images/affichecoupdetheatre.jpg" alt="Affiche du spectacle Coup de Théâtre(s)">
+      <img src="images/affichecoupdetheatre.jpg" alt="Affiche du spectacle Coup de Théâtre(s)" loading="lazy" decoding="async">
       <div>
         <h3>Coup de Théâtre(s)
         <span class="season-inline">Saison 2022–2023</span></h3>
@@ -127,7 +129,7 @@
     </article>
 
     <article class="show" data-photos="images/revanche1.jpg,images/revanche2.jpg,images/revanche5.jpg,images/revanche4.jpg,images/revanche3.jpg">
-      <img src="images/afficherevanche.jpg" alt="Affiche du spectacle La Revanche de Louis XI">
+      <img src="images/afficherevanche.jpg" alt="Affiche du spectacle La Revanche de Louis XI" loading="lazy" decoding="async">
       <div>
         <h3>La Revanche de Louis XI
         <span class="season-inline">Saison 2021–2022</span></h3>
@@ -137,7 +139,7 @@
     </article>
 
     <article class="show" data-photos="images/merci1.jpg,images/merci2.JPG,images/merci3.JPG,images/merci4.JPG,images/merci5.JPG,images/merci6.JPG,images/merci7.JPG,images/merci8.JPG,images/merci9.JPG,images/merci10.JPG,images/merci11.JPG">
-      <img src="images/affichemercibernard.jpg" alt="Affiche du spectacle Merci Bernard">
+      <img src="images/affichemercibernard.jpg" alt="Affiche du spectacle Merci Bernard" loading="lazy" decoding="async">
       <div>
         <h3>Merci Bernard
         <span class="season-inline">Saison 2019–2020</span></h3>
@@ -148,7 +150,7 @@
     </article>
 
     <article class="show" data-photos="images/tour10.jpg,images/tour2.jpg,images/tour3.jpg,images/tour4.jpg,images/tour5.jpg,images/tour6.jpg,images/tour7.jpg,images/tour8.jpg,images/tour9.jpg,images/tour1.jpg">
-      <img src="images/affichetourdumonde.jpg" alt="Affiche du spectacle Le tour du monde en 80 jours">
+      <img src="images/affichetourdumonde.jpg" alt="Affiche du spectacle Le tour du monde en 80 jours" loading="lazy" decoding="async">
       <div>
         <h3>Le tour du monde en 80 jours
         <span class="season-inline">Saison 2018–2019</span></h3>
@@ -159,7 +161,7 @@
     </article>
 
     <article class="show" data-photos="images/florimont1.jpg,images/florimont2.jpg,images/florimont3.jpg,images/florimont4.jpg,images/florimont5.jpg">
-      <img src="images/affichemissionflorimont.jpg" alt="Affiche du spectacle Mission Florimont">
+      <img src="images/affichemissionflorimont.jpg" alt="Affiche du spectacle Mission Florimont" loading="lazy" decoding="async">
       <div>
         <h3>Mission Florimont
         <span class="season-inline">Saison 2017–2018</span></h3>
@@ -169,7 +171,7 @@
     </article>
 
     <article class="show" data-photos="images/diablogues1.jpg,images/diablogues2.jpg,images/diablogues3.jpg,images/diablogues4.jpg,images/diablogues5.jpg,images/diablogues7.jpg,images/diablogues8.jpg,images/diablogues9.jpg">
-      <img src="images/affichelesdiablogues.jpg" alt="Affiche du spectacle Les Diablogues">
+      <img src="images/affichelesdiablogues.jpg" alt="Affiche du spectacle Les Diablogues" loading="lazy" decoding="async">
       <div>
         <h3>Les Diablogues
         <span class="season-inline">Saison 2016–2017</span></h3>
@@ -184,7 +186,7 @@
 </main>
 
 <!-- ======= Modal popup ======= -->
-<div id="photoModal" class="modal">
+<div id="photoModal" class="modal" role="dialog" aria-modal="true" aria-label="Galerie photos du spectacle">
   <span class="close">&times;</span>
   <div class="modal-content" id="modalContent">
     <!-- Les images seront injectées ici -->
@@ -201,28 +203,66 @@ const modalContent = document.getElementById("modalContent");
 const closeBtn = document.querySelector(".close");
 
 // Ouvrir le modal quand on clique sur un spectacle
-document.querySelectorAll(".past-shows .show, .current-season .show").forEach(show => {
-  show.addEventListener("click", () => {
-    const photos = show.dataset.photos.split(",");
+// (seuls les spectacles qui ont un attribut data-photos sont cliquables)
+document.querySelectorAll(".show[data-photos]").forEach(show => {
+  const titre = show.querySelector("h3");
+  const nom = titre ? titre.childNodes[0].textContent.trim() : "Spectacle";
+
+  show.setAttribute("role", "button");
+  show.setAttribute("tabindex", "0");
+  show.setAttribute("aria-label", "Voir les photos du spectacle " + nom);
+
+  const ouvrir = () => {
+    const photos = show.dataset.photos.split(",").filter(src => src.trim() !== "");
     modalContent.innerHTML = ""; // vider l'ancien contenu
-    photos.forEach(src => {
+    photos.forEach((src, i) => {
       const img = document.createElement("img");
-      img.src = src;
+      img.src = src.trim();
+      img.alt = nom + " — photo " + (i + 1);
+      img.loading = "lazy";
       modalContent.appendChild(img);
     });
     modal.style.display = "block";
+    closeBtn.focus();
+  };
+
+  show.addEventListener("click", ouvrir);
+  show.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      ouvrir();
+    }
   });
 });
 
 // Fermer le modal
-closeBtn.addEventListener("click", () => {
+const fermer = () => {
   modal.style.display = "none";
+  modalContent.innerHTML = ""; // libérer les images
+};
+
+closeBtn.setAttribute("role", "button");
+closeBtn.setAttribute("tabindex", "0");
+closeBtn.setAttribute("aria-label", "Fermer la galerie");
+closeBtn.addEventListener("click", fermer);
+closeBtn.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    fermer();
+  }
+});
+
+// Fermer avec la touche Échap
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    fermer();
+  }
 });
 
 // Fermer si clic en dehors du contenu
 window.addEventListener("click", (e) => {
-  if (e.target == modal) {
-    modal.style.display = "none";
+  if (e.target === modal) {
+    fermer();
   }
 });
 </script>

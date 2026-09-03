@@ -2,11 +2,22 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Contact — Sépafo</title>
+  <title>Sépafo — Contact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Contactez la troupe de théâtre amateur Sépafo (Angers) : email, téléphone et formulaire de message.">
+
+  <meta property="og:site_name" content="Sépafo">
+  <meta property="og:title" content="Sépafo — Contact">
+  <meta property="og:description" content="Contactez la troupe de théâtre amateur Sépafo (Angers) : email, téléphone et formulaire de message.">
+  <meta property="og:image" content="https://www.sepafo.fr/images/logo.png">
+  <meta property="og:url" content="https://www.sepafo.fr/contact.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="canonical" href="https://www.sepafo.fr/">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="canonical" href="https://www.sepafo.fr/contact.html">
 </head>
 <body>
 
@@ -46,14 +57,14 @@ src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v19.0">
 <section>
   <h2>Laisser un message</h2>
   <form action="mailto:troupe.sepafo@gmail.com" method="post" enctype="text/plain">
-    <label>Nom</label>
-    <input type="text" name="Nom">
+    <label for="contact-nom">Nom</label>
+    <input type="text" id="contact-nom" name="Nom" autocomplete="name" required>
 
-    <label>Email</label>
-    <input type="email" name="Email">
+    <label for="contact-email">Email</label>
+    <input type="email" id="contact-email" name="Email" autocomplete="email" required>
 
-    <label>Message</label>
-    <textarea name="Message"></textarea>
+    <label for="contact-message">Message</label>
+    <textarea id="contact-message" name="Message" rows="6" required></textarea>
 
     <button type="submit">Envoyer</button>
   </form>
