@@ -1,0 +1,4 @@
+# Photos en haute définition, conservées en local uniquement.
+# Ce dossier ne doit jamais être publié : le site utilise les
+# versions allégées de images/.
+images-hd/
